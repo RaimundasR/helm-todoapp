@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  todoapp:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2025-04-24T16:16:06.091381399Z"
+    description: Helm diagrama Raimundo TODO aplikacijai
+    digest: 0161bf206ec4122e5d585fd67a7df5fec454741374730142b6cfe3bbd0e78543
+    name: todoapp
+    type: application
+    urls:
+    - https://RaimundasR.github.io/helm-todoapp/todoapp-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-04-24T16:16:06.09095527Z"
