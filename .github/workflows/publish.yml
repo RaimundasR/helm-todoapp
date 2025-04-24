@@ -24,8 +24,7 @@ jobs:
         run: |
           mkdir -p .deploy
           helm package charts/todoapp -d .deploy
-          helm repo index .deploy --url https://RaimundasR.github.io/task-app
-
+          helm repo index .deploy --url https://RaimundasR.github.io/helm-todoapp
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
