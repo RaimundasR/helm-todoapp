@@ -2,7 +2,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: {{ include "todoapp.fullname" . }}
+  name: "{{ include "todoapp.fullname" . }}"
   annotations:
     {{- range $key, $value := .Values.ingress.annotations }}
     {{ $key }}: {{ $value | quote }}
@@ -11,15 +11,15 @@ spec:
   ingressClassName: {{ .Values.ingress.className }}
   rules:
     {{- range .Values.ingress.hosts }}
-    - host: {{ .host }}
+    - host: {{ .host | quote }}
       http:
         paths:
           {{- range .paths }}
-          - path: {{ .path }}
-            pathType: {{ .pathType }}
+          - path: {{ .path | quote }}
+            pathType: {{ .pathType | quote }}
             backend:
               service:
-                name: {{ include "todoapp.fullname" $ }}
+                name: "{{ include "todoapp.fullname" $ }}"
                 port:
                   number: {{ $.Values.service.port }}
           {{- end }}
