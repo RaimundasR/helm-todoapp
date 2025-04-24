@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: raimundas0106/todoapp
+  repository: raimundas0106/rocket
   pullPolicy: IfNotPresent
   tag: "latest"
 
