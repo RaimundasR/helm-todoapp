@@ -25,7 +25,7 @@ jobs:
         run: |
           mkdir -p .deploy
           helm package charts/todoapp -d .deploy
-          helm repo index .deploy --url https://raimundasr.github.io/helm-todoapp
+          helm repo index .deploy --url https://RaimundasR.github.io/helm-todoapp
 
       - name: 🚫 Disable Jekyll to serve YAML
         run: echo "" > .deploy/.nojekyll
